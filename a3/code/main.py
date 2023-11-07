@@ -1,6 +1,6 @@
 import os
 import cv2
-from circle_detection import circle_detection
+from circle_detection import eye_detection
 
 def main():
   # File path constants
@@ -17,8 +17,8 @@ def main():
     if eye_img is None:
       print("Invalid path for eye image")
       return
-    # Run the circle detection function
-    circle = circle_detection(eye_img)
+    # Run the circle detection function 
+    circle = eye_detection(eye_img)
     if circle is None:
       print("No circle detected")
     else:
